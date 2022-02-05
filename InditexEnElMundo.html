@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inditex en el mundo</title>
+    <style>
+        header
+        {
+          background-color: #aa0000;
+          padding: 3em;   <!--revisar-->
+          text-align: center;
+          margin: 0;
+        }
+
+        ul
+        {
+          list-style: none;
+        }
+
+        #menu li>a
+        {
+          background-color: #aa000000;
+          color: white;
+          padding: em;
+          display: block;
+          text-decoration: none;
+          min-width: 250px;
+          font: 22px Candara, sans-serif;
+        }
+        #menu li>a:hover
+        {
+          color: #000;
+          background-color: #eaeaea;
+        }
+        #menu>li
+        {
+          float: right;
+          text-align:center
+        }
+        #menu>li>ul
+        {
+          display: none;
+        }
+        #menu>li:hover>ul
+        {
+          display:block;
+        }
+
+        <!-- Para los link que cambien de color-->
+
+        a:link
+        {
+          color: green;
+          background-color: transparent;
+          text-decoration: none;
+        }
+
+        a:visited
+        {
+          color: pink;
+          background-color: transparent;
+          text-decoration: none;
+        }
+
+        a:hover
+        {
+          color: red;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+
+        a:active
+        {
+          color: yellow;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+
+        .container
+        {
+          display:flex;
+          flex-direction: column;
+          height:100%;
+          text-align:center;
+
+        }
+
+        .container__footer
+        {
+        flex-shrink:0;
+        }
+
+        .container__main
+        {
+        flex-grow: 1;
+        margin-left: 30px;
+        }
+
+        h1
+        {
+        font: 40px Candara, sans-serif;
+        text-align:left;
+        }
+
+        h2
+        {
+        font: 30px Candara, sans-serif;
+        text-align:left;
+        }
+
+        p
+        {
+        font: 20px Candara, sans-serif;
+        text-align:left;
+        }
+
+        table
+        {
+        width:100%;
+        font: 20px Candara, sans-serif;
+        }
+
+        body
+        {
+        background: #F7E8E8;
+        }
+
+
+    </style>
+</head>
+<body >
+    <header>
+        <nav>
+
+            <img  src = "resources\logo_inditex.png"  width = "20%" alt="Inditex icon">
+
+            <ul id="menu">
+                <li><a href="">ENCUÉNTRANOS</a></li>  <!-- redes sociales-->
+                <li><a href="">ÚNETE A NOSOTROS</a></li> <!-- formulario para empleo-->
+                <li><a href="">INDITEX EN EL MUNDO</a></li> <!-- mapa y lista con los sitios donde hay tienda -->
+                <li><a href="">INICIO</a></li> <!-- pag d inicio -->
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container">
+
+
+        <main class = "container_main">
+
+            <h1> INDITEX EN EL MUNDO</h1>
+            <hr>
+            <h2> Países en los que la firma Inditex posee tiendas</h2>
+            <hr>
+            <p>
+                Inditex opera hasta en 216 mercados de forma online, y cuenta con tiendas físicas en los 96 que se muestran en el mapa.
+            </p>
+
+            <img  src = "resources\paises_en_los_que_inditex_opera.png"  width = "70%" alt="Inditex icon">
+        </main>
+
+
+        <footer class = "container__footer">
+
+            <table>
+                <tr>
+                    <th>CONTINENTE</th>
+                    <th>ZARA</th>
+                    <th>PULL&BEAR</th>
+                    <th>MASSIMO DUTTI</th>
+                    <th>BERSHKA</th>
+                    <th>STRADIVARIUS</th>
+                    <th>OYSHO</th>
+                    <th>ZARA HOME</th>
+                    <th>UTERQÜE</th>
+                    <th>TOTAL</th>
+                </tr>
+                <tr>
+                    <td>EUROPA</td>
+                    <td>1202</td>
+                    <td>657</td>
+                    <td>437</td>
+                    <td>750</td>
+                    <td>728</td>
+                    <td>385</td>
+                    <td>334</td>
+                    <td>51</td>
+                    <td>4544</td>
+                </tr>
+
+                <tr>
+                    <td>AMERICA</td>
+                    <td>321</td>
+                    <td>94</td>
+                    <td>58</td>
+                    <td>102</td>
+                    <td>82</td>
+                    <td>61</td>
+                    <td>56</td>
+                    <td>16</td>
+                    <td>790</td>
+                </tr>
+
+                <tr>
+                    <td>ASIA Y EL RESTO DEL MUNDO</td>
+                    <td>524</td>
+                    <td>119</td>
+                    <td>160</td>
+                    <td>137</td>
+                    <td>124</td>
+                    <td>128</td>
+                    <td>117</td>
+                    <td>14</td>
+                    <td>1323</td>
+                </tr>
+
+            </table>
+
+        </footer>
+    </div>
+
+</body>
+</html>

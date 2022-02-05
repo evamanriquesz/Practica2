@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Únete a nosotros</title>
+    <style>
+        header
+        {
+          background-color: #aa0000;
+          padding: 3em;   <!--revisar-->
+          text-align: center;
+          margin: 0;
+        }
+
+        ul
+        {
+          list-style: none;
+        }
+
+        #menu li>a
+        {
+          background-color: #aa000000;
+          color: white;
+          padding: em;
+          display: block;
+          text-decoration: none;
+          min-width: 250px;
+          font: 22px Candara, sans-serif;
+        }
+        #menu li>a:hover
+        {
+          color: #000;
+          background-color: #eaeaea;
+        }
+        #menu>li
+        {
+          float: right;
+          text-align:center
+        }
+        #menu>li>ul
+        {
+          display: none;
+        }
+        #menu>li:hover>ul
+        {
+          display:block;
+        }
+
+        <!-- Para los link que cambien de color-->
+
+        a:link
+        {
+          color: green;
+          background-color: transparent;
+          text-decoration: none;
+        }
+
+        a:visited
+        {
+          color: pink;
+          background-color: transparent;
+          text-decoration: none;
+        }
+
+        a:hover
+        {
+          color: red;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+
+        a:active
+        {
+          color: yellow;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+
+        .container
+        {
+          display:flex
+        }
+
+        .container__half
+        {
+        flex: 1;
+        margin:40px;
+        }
+
+        h1 {
+        font: 40px Candara, sans-serif;
+        }
+
+        p
+        {
+        font: 20px Candara, sans-serif;
+        }
+         body
+        {
+        background: #F7E8E8;
+        }
+
+
+        legend
+        {
+        font:30px Candara, sans-serif;
+        }
+
+        label
+        {
+        font:22px Candara, sans-serif;
+        }
+        input[ type="text"]
+        {
+        width:25%;
+        font:20px Candara, sans-serif;
+        }
+        textarea
+        {
+          font:20px Candara, sans-serif;
+          }
+
+
+    </style>
+</head>
+
+<body>
+<header>
+    <nav>
+
+        <img  src = "resources\logo_inditex.png"  width = "20%" alt="Inditex icon">
+
+        <ul id="menu">
+            <li><a href="">ENCUÉNTRANOS</a></li>  <!-- redes sociales-->
+            <li><a href="">ÚNETE A NOSOTROS</a></li> <!-- formulario para empleo-->
+            <li><a href="">INDITEX EN EL MUNDO</a></li> <!-- mapa y lista con los sitios donde hay tienda -->
+            <li><a href="">INICIO</a></li> <!-- pag d inicio -->
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+
+
+
+    <div class="container__half">
+
+        <h1>Únete a nosotros:</h1>
+        <hr>
+
+        <form action="signup" method="post" id="signup" target="_self" autocomplete="on">
+
+            <fieldset>
+                <legend>Datos personales:</legend>
+
+                <div class = "field">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre"><br>
+                <small></small>
+                </div>
+
+                <div class = "field">
+                <label for="apellidos">Apellidos:</label><br>
+                <input type="text" id="apellidos" name="apellidos"><br>
+                <small></small>
+                </div>
+
+                <div class="field">
+                <label for="fecha_nacimiento">Fecha de nacimiento:</label><br>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" value="2022-02-05"><br>
+                <small></small>
+                </div>
+
+
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Dónde trabajar:</legend>
+
+                <div class ="field">
+                <label for="tiendas">Tienda en la que te gustaría trabajar:</label><br>
+                <select id="tiendas" name="tiendas" size="4" >
+                    <option value = "zara" selected>Zara</option>
+                    <option value = "pull_and_bear">Pull&Bear</option>
+                    <option value = "massimo_dutti">Massimo Dutti</option>
+                    <option value = "bershka">Bershka</option>
+                    <option value = "stradivarius">Stradivarius</option>
+                    <option value = "oysho">Oysho</option>
+                    <option value = "zara home">Zara Home</option>
+                    <option value = "uterque">Uterqüe</option>
+                </select>
+                <small></small>
+                </div>
+                <br>
+
+                <div class ="field">
+                <label for="ciudad">Ciudad en la que te gustaría trabajar:</label><br>
+                <input type="text" id="ciudad" name="ciudad"><br>
+
+                <label for="pais">País en el que te gustaría trabajar:</label><br>
+                <input type="text" id="pais" name="pais"><br>
+                <small></small>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Háblanos de tí:</legend>
+
+                <div>
+                <label for="hablanos_de_ti">Describete, cuéntanos por qué deberías unirte a nuestro equipo:</label><br>
+                <textarea id="hablanos_de_ti" name="hablanos_de_ti"></textarea><br>
+                    <small></small>
+                </div>
+
+            </fieldset>
+
+            <button type="submit">Enviar formulario</button>
+
+        </form>
+
+    </div>
+
+    <div class ="container__half">
+
+        <table>
+            <tr>
+                <th>
+                    <img  src = "resources\tienda_zara.jpg"  width = "50%" alt="Zara shop">
+
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+
+                    <img  src = "resources\tienda_pull_and_bear.jpg"  width = "50%" alt="Pull&Bear shop">
+
+                </th>
+            </tr>
+
+        </table>
+    </div>
+
+
+</div>
+
+
+<script src = "app.js"></script>
+
+</body>
+</html>
