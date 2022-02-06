@@ -21,14 +21,18 @@ function hasValue(input, message) {
 		return showError(input, message);
 	}
 	return showSuccess(input);
-}}
+}
+
 
 const form = document.querySelector("#signup");
 
-const NOMBRE_REQUIRED = "Introduzca su nombre";
-const APELLIDOS_REQUIRED ="Introduzca su apellido";
-//const FECHA_NACIMIENTO_REQUIRED = "Please enter your birthday";
-
+const NOMBRE_REQUIRED = "Por favor, introduce tu nombre";
+const APELLIDOS_REQUIRED = "Por favor, introduce tus apellidos";
+const FECHA_NACIMIENTO_REQUIRED = "Por favor, introduce tu fecha de nacimiento";
+const TIENDA_REQUIRED ="Por favor, seleccione una tienda";
+const CIUDAD_REQUIRED = "Por favor, introduce una ciudad";
+const PAIS_REQUIRED = "Por favor, introduce un pais";
+const HABLANOS_DE_TI_REQUIRED ="Por favor, háblanos de ti";
 
 form.addEventListener("submit", function (event) {
 	// stop form submission
@@ -36,11 +40,15 @@ form.addEventListener("submit", function (event) {
 
 	// validate the form
 	let nombreValid = hasValue(form.elements["nombre"], NOMBRE_REQUIRED);
-	let apellidosValid = has.Value(form.elements["apellidos"], APELLIDOS_REQUIRED);
-	//let fechaNacimientoValid = has.Value(form.elements["fecha_nacimiento"], FECHA_NACIMIENTO_REQUIRED);
-
+	let apellidosValid = hasValue(form.elements["apellidos"], APELLIDOS_REQUIRED);
+	let fechaNacimientoValid = hasValue(form.elements["fecha_nacimiento"], FECHA_NACIMIENTO_REQUIRED);
+	let tiendaValid = hasValue(form.elements["tiendas"], TIENDA_REQUIRED);
+	let ciudadValid = hasValue(form.elements["ciudad"], CIUDAD_REQUIRED);
+	let paisValid = hasValue(form.elements["pais"], PAIS_REQUIRED);
+	let hablanosDeTiValid = hasValue(form.elements["hablanos_de_ti"], HABLANOS_DE_TI_REQUIRED);
 	// if valid, submit the form.
-	if (nombreValid && apellidosValid ) {
-		alert("El nombre es " );
+	if (nombreValid && apellidosValid && fechaNacimientoValid && tiendaValid && ciudadValid && paisValid && hablanosDeTiValid) {
+		alert("Nombre introducido: " +form.elements["nombre"].value  + "\nApellidos introducidos: " + form.elements["apellidos"].value +"\nFecha de nacimiento: " + form.elements["fecha_nacimiento"].value + "\nTienda seleccionada: " + form.elements["tiendas"].value + "\nCiudad introducida: "+form.elements["ciudad"].value + "\nPaís introducido: "+ form.elements["pais"].value + "\nHáblanos de ti: " + form.elements["hablanos_de_ti"].value);
 	}
 });
+
