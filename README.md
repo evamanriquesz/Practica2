@@ -32,6 +32,5 @@ En el textarea de la página 'Únete a nosotros', he añadido el atributo aria-m
 varias líneas. 
 
 
-##
 
 
