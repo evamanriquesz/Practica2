@@ -118,7 +118,19 @@
         textarea
         {
           font:20px Candara, sans-serif;
+          aria-multiline:"true";
           }
+
+        button
+        {
+        background-color:#E8A4A4;
+        color: white;
+        font:20px Candara, sans-serif;
+        border-radius:8px;
+        cursor: pointer;
+        text-align: center;
+
+        }
 
 
     </style>
@@ -131,10 +143,10 @@
         <img  src = "resources\logo_inditex.png"  width = "20%" alt="Inditex icon">
 
         <ul id="menu">
-            <li><a href="">ENCUÉNTRANOS</a></li>  <!-- redes sociales-->
-            <li><a href="">ÚNETE A NOSOTROS</a></li> <!-- formulario para empleo-->
-            <li><a href="">INDITEX EN EL MUNDO</a></li> <!-- mapa y lista con los sitios donde hay tienda -->
-            <li><a href="">INICIO</a></li> <!-- pag d inicio -->
+            <li><a href="Encuentranos.html">ENCUÉNTRANOS</a></li>  <!-- redes sociales-->
+            <li><a href="UneteANosotros.html">ÚNETE A NOSOTROS</a></li> <!-- formulario para empleo-->
+            <li><a href="InditexEnElMundo.html">INDITEX EN EL MUNDO</a></li> <!-- mapa y lista con los sitios donde hay tienda -->
+            <li><a href="Principal.html">INICIO</a></li> <!-- pag d inicio -->
         </ul>
     </nav>
 </header>
@@ -148,7 +160,7 @@
         <h1>Únete a nosotros:</h1>
         <hr>
 
-        <form action="signup" method="post" id="signup" target="_self" autocomplete="on">
+        <form action="/signup" method="post" id="signup" target="_self" autocomplete="on">
 
             <fieldset>
                 <legend>Datos personales:</legend>
@@ -167,14 +179,12 @@
 
                 <div class="field">
                 <label for="fecha_nacimiento">Fecha de nacimiento:</label><br>
-                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" value="2022-02-05"><br>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" value="2003-12-31"><br>
                 <small></small>
                 </div>
 
-                <script src = "app.js"></script>
-
-
             </fieldset>
+
 
             <fieldset>
                 <legend>Dónde trabajar:</legend>
@@ -198,7 +208,10 @@
                 <div class ="field">
                 <label for="ciudad">Ciudad en la que te gustaría trabajar:</label><br>
                 <input type="text" id="ciudad" name="ciudad"><br>
+                <small></small>
+                </div>
 
+                <div class ="field">
                 <label for="pais">País en el que te gustaría trabajar:</label><br>
                 <input type="text" id="pais" name="pais"><br>
                 <small></small>
@@ -210,12 +223,13 @@
                 <legend>Háblanos de tí:</legend>
 
                 <div>
-                <label for="hablanos_de_ti">Describete, cuéntanos por qué deberías unirte a nuestro equipo:</label><br>
+                <label for="hablanos_de_ti">Descríbete, cuéntanos por qué deberías unirte a nuestro equipo:</label><br>
                 <textarea id="hablanos_de_ti" name="hablanos_de_ti"></textarea><br>
-                    <small></small>
+                <small></small>
                 </div>
 
             </fieldset>
+            <br>
 
             <button type="submit">Enviar formulario</button>
 
@@ -223,9 +237,12 @@
 
     </div>
 
+    <script src = "app.js"></script>
+
     <div class ="container__half">
 
         <table>
+
             <tr>
                 <th>
                     <img  src = "resources\tienda_zara.jpg"  width = "50%" alt="Zara shop">
